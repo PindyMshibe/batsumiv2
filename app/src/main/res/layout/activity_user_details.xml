@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userDetails">
+
+  <!--image view for contact-->
+  <ImageView
+      android:id="@+id/imageContact"
+      android:layout_width="match_parent"
+      android:layout_height="250dp"
+      android:background="@color/purple_200"
+      android:padding="50dp"
+      android:src="@drawable/ic_account"
+      app:tint="@color/white" />
+
+  <!--text view for displaying user name-->
+  <TextView
+      android:id="@+id/textName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/imageContact"
+      android:background="@color/purple_200"
+      android:padding="8dp"
+      android:text="Name"
+      android:textColor="@color/black"
+      android:textSize="18sp" />
+
+  <!--cardview for displaying user contact-->
+  <androidx.cardview.widget.CardView
+      android:id="@+id/userCard"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/textName"
+      android:layout_marginStart="4dp"
+      android:layout_marginTop="20dp"
+      android:layout_marginEnd="4dp"
+      app:cardCornerRadius="4dp"
+      app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <!--image view for making a call -->
+      <ImageView
+          android:id="@+id/userCall"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_margin="8dp"
+          android:padding="4dp"
+          android:src="@drawable/ic_call"
+          app:tint="@color/purple_700" />
+      <!--text view for displaying user contact-->
+      <TextView
+          android:id="@+id/userPhone"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginStart="3dp"
+          android:layout_marginTop="8dp"
+          android:layout_toStartOf="@id/UserMessage"
+          android:layout_toEndOf="@id/userCall"
+          android:layout_toRightOf="@id/userCall"
+          android:text="Phone" />
+
+      <!--image view for displaying message icon-->
+      <ImageView
+          android:id="@+id/UserMessage"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_alignParentEnd="true"
+          android:layout_margin="8dp"
+          android:padding="4dp"
+          android:src="@drawable/ic_message"
+          app:tint="@color/purple_700" />
+      <ImageView
+          android:id="@+id/userShare"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:layout_toLeftOf="@id/UserMessage"
+          app:tint="@color/purple_700"
+          android:src="@android:drawable/ic_menu_share"
+          android:layout_margin="8dp"/>
+    </RelativeLayout>
+
+  </androidx.cardview.widget.CardView>
+  <Button
+      android:id="@+id/shareImage"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/userCard"
+      android:layout_margin="10dp"
+      android:text="take screenshot and share" />
+</RelativeLayout>

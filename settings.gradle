@@ -1,0 +1,2 @@
+rootProject.name = "batsumiv2"
+include ':app'
